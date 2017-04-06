@@ -13,13 +13,15 @@ var config = {
 var paths = {
 	html: "**/*.html",
 	sass: "scss/**/*.scss",
-	js: "js/app.js",
+	js: "js/**/*.js",
+	mainJS: "js/app.js"
 };
 
 var sources = {
 	html: config.source + paths.html,
 	sass: config.source + paths.sass,
-	js: config.source + paths.js
+	js: config.source + paths.js,
+	rootJS: config.source + paths.mainJS
 };
 
 gulp.task("sass", function() {
@@ -36,7 +38,7 @@ gulp.task("sass-watch", ["sass"], function (done) {
 });
 
 gulp.task("js", function() {
-	gulp.src(sources.js)
+	gulp.src(sources.rootJS)
 		.pipe(browserify())
 		.pipe(rename("bundle.js"))
 		.pipe(gulp.dest(config.build + "js"));
