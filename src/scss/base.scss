@@ -2,8 +2,8 @@
 *{
     font-family: $font-museo;
     font-size: 15px;
+    box-sizing: border-box;
 }
-
 
 input {
     border-radius: 3px;
@@ -11,12 +11,13 @@ input {
 	border: solid 1px #e5e5e5;
     font-size: 0.8em;
     height: 2.6em;
+    padding: 15px 10px;
 }
 .btn{
     background: $green-accent;
     border:none;
-    border-radius: 3px; 
+    border-radius: 3px;     
     color:white;
     font-family: $font-opensans;
-    width: 215px;
+    height: 40px;
 }

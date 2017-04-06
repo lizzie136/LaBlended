@@ -1,13 +1,14 @@
 @import "../variables";
 .login-header{
-    .logo{
-
-    }
+    text-align: center;
+    margin-top: 50px;
     h3{
         font-family: $font-museo;
         font-weight: 300;
         font-size: 1em;
         text-align: center;
+        margin-top:30px;
+        margin-bottom:30px;
     }
 }
 

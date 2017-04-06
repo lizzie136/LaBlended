@@ -37,7 +37,6 @@ function login(user, password){
 
 function validateLogin(e){
     e.preventDefault();
-    debugger;
     var userNode = document.getElementsByName("username")[0]; 
     var passwordNode =document.getElementsByName("password")[0];
 
