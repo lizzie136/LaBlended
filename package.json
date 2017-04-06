@@ -1,0 +1,25 @@
+{
+  "name": "lablended",
+  "version": "1.0.0",
+  "description": "Design Sprint - Facade - Laboratoria",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laboratoria/LaBlended.git"
+  },
+  "keywords": [
+    "Laboratoria"
+  ],
+  "author": "Lab Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Laboratoria/LaBlended/issues"
+  },
+  "homepage": "https://github.com/Laboratoria/LaBlended#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
