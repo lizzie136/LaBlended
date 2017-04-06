@@ -4,14 +4,16 @@
   "description": "Design Sprint - Facade - Laboratoria",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp dev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Laboratoria/LaBlended.git"
   },
   "keywords": [
-    "Laboratoria"
+    "Laboratoria",
+    "Design Sprint",
+    "Blended Learning"
   ],
   "author": "Lab Team",
   "license": "MIT",
@@ -20,7 +22,10 @@
   },
   "homepage": "https://github.com/Laboratoria/LaBlended#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0"
   }
 }
