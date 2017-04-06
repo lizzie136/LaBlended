@@ -1,0 +1,25 @@
+@import "../variables";
+.login-header{
+    .logo{
+
+    }
+    h3{
+        font-family: $font-museo;
+        font-weight: 300;
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
+#login{
+    width:250px;
+    margin:auto;
+    padding: 10px;
+
+    input{
+        width:100%;
+        margin-top:5px;
+        margin-bottom:21px;
+    }
+
+}
