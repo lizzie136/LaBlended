@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title>Laboratoria - Blended Learning</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
         <header>
@@ -15,7 +15,13 @@
                 <a href="mi-squad" class="menu-item">Mi Squad</a>
             </nav>
         </header>
-        <section id="lesson-plan">
+        <section id="countdown" style="display:none">
+            <h2>
+                <span id="minutes"></span>:<span id="seconds"></span>
+            </h2>
+        </section>
+        <section class="streaming" style="display:none">
+            <iframe id="video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
         </section>
         <script src="./js/bundle.js"></script>
     </body>

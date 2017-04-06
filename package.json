@@ -27,5 +27,8 @@
     "gulp-browserify": "^0.5.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "firebase": "^3.7.5"
   }
 }
