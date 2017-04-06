@@ -1,9 +1,5 @@
-module.exports = {
-    init: loginInit,
-    login: login,
-    validate: validateLogin
-
-};
+var config = require("../config");
+var database = config.firebase.database;
 
 function loginInit(){
     var loginForm = document.getElementById("login");
@@ -11,21 +7,8 @@ function loginInit(){
 }
 
 function login(user, password){
-    var config = {
-        apiKey: "AIzaSyBpHfxeWPUVgKpKLxTHip0cvZ_sT0s8BwA",
-        authDomain: "lablended.firebaseio.com",
-        databaseURL: "https://lablended.firebaseio.com",
-        storageBucket: "lablended.appspot.com",
-        messagingSenderId: "",
-    };
-
-    firebase.initializeApp(config);
-
-    var database = firebase.database();
-
-    return firebase.database().ref('/users/'+user).once('value').then(function(snapshot) {
+    return database.ref('/users/'+user).once('value').then(function(snapshot) {
         if(snapshot.exists() && password == snapshot.val().password){
-
             window.location = "index.html";
         }else{
             console.log("error en passowrd o algo");
@@ -34,10 +17,8 @@ function login(user, password){
     });  
 }
 
-
 function validateLogin(e){
     e.preventDefault();
-    debugger;
     var userNode = document.getElementsByName("username")[0]; 
     var passwordNode =document.getElementsByName("password")[0];
 
@@ -57,3 +38,9 @@ function validateUser(element){
 function validatePassword(element){
     return element!=undefined && !isEmpty(element) && /^[a-zA-Z0-9]*$/.test(element.value);
 }
+
+module.exports = {
+    init: loginInit,
+    login: login,
+    validate: validateLogin
+};
