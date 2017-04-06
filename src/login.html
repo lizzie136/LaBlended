@@ -4,14 +4,22 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://use.typekit.net/tsf5qui.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
 	    <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
-       <form id="login">
-            <input type="text" name="username" placeholder="USUARIO">
-            <input type="password" name="password" placeholder="CONTRASENA">
-            <input type="submit" value="Ingresar">
+       <header class="login-header">
+           <img src="asssets/logo.jpg" alt="Laboratoria">
+           <h2>Bienvenida, ingresa a tu cuenta</h2>
+       </header>
+       <form id="login" onsubmit="login.validate">
+            <label for="username">Username:</label><input type="text" name="username" placeholder="Código de Laboratoria">
+            <label for="password">Password:</label><input type="password" name="password" placeholder="Números de código de Laboratoria">
+            <input type="submit" value="VAMOS!" class="btn">
         </form>
+        <script src="//use.typekit.net/owh6gyt.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
         <script src="./js/bundle.js"></script>
     </body>
 </html>
