@@ -1,18 +1,25 @@
-@import "../variables";
-.login-header{
-    .logo{
+// @import "../variables";
 
+$login-width : 250px;
+.login-header{
+    text-align: center;
+    margin-top: 50px;
+    .logo{
+        width: $login-width*0.8;
     }
     h3{
+        color: $light-text;
         font-family: $font-museo;
         font-weight: 300;
         font-size: 1em;
         text-align: center;
+        margin-top:30px;
+        margin-bottom:30px;
     }
 }
 
 #login{
-    width:250px;
+    width:$login-width;
     margin:auto;
     padding: 10px;
 

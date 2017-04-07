@@ -1,0 +1,7 @@
+@mixin museo-h1($color){
+        font-family: $font-museo;
+        font-weight: 500;
+        font-size: 25px;
+        color:$color;
+        padding: 20px 0px
+}   
