@@ -17,8 +17,8 @@ function login(user, password){
                 window.location = "kick-off.html";
             }
         }else{
-            console.log("error en password o algo");
-        }
+            console.log("error en passowrd o algo");
+        }   
     });  
 }
 
