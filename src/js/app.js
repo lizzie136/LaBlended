@@ -1,8 +1,31 @@
 var config = require("./config");
-var login = require("./login");
-var kickoff = require("./kickoff");
 
-login.init();
+var page = {};
+page.get = function(path, callback) {
+	if (window.location.pathname.indexOf(path) >= 0) {
+		callback();
+	}
+}
 
-console.log(config);
 config.menu();
+
+page.get("/", function() {
+
+});
+
+page.get("/login", function() {
+	var login = require("./login");
+	login.init();
+})
+
+page.get("/kick-off", function() {
+	var kickoff = require("./kickoff");
+});
+
+page.get("/lesson", function() {
+	var lesson = require("./lesson");
+});
+
+page.get("/editor", function() {
+	var editor = require("./editor");
+});

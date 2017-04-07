@@ -11,24 +11,25 @@ var config = {
 };
 
 var paths = {
-    assets: "assets/**",
-    html: "**/*.html",
-    sass: "scss/**/*.scss",
-    js: "js/**/*.js",
-    mainJS: "js/app.js"
+	assets: "assets/**",
+	html: "**/*.html",
+	sass: "scss/**/*.scss",
+	js: "js/**/*.js",
+	mainSass: "scss/main.scss",
+	mainJS: "js/app.js"
 };
 
 var sources = {
-    assets: config.source + paths.assets,
-    html: config.source + paths.html,
-    sass: config.source + paths.sass,
-    js: config.source + paths.js,
-    rootJS: config.source + paths.mainJS
-};rootJS: config.source + paths.mainJS
-
+	assets: config.source + paths.assets,
+	html: config.source + paths.html,
+	sass: config.source + paths.sass,
+	js: config.source + paths.js,
+	rootSass: config.source + paths.mainSass,
+	rootJS: config.source + paths.mainJS
+};
 
 gulp.task("sass", function() {
-    gulp.src(sources.sass)
+    gulp.src(sources.rootSass)
         .pipe(sass({
         	outputStyle: "compressed"
         }).on("error", sass.logError))
@@ -63,8 +64,8 @@ gulp.task("html-watch", ["html"], function (done) {
 });
 
 gulp.task("assets", function() {
-    gulp.src(sources.assets)
-        .pipe(gulp.dest(config.build + "assets"));
+	gulp.src(sources.assets)
+		.pipe(gulp.dest(config.build + "assets"));
 });
 
 gulp.task("assets-watch", ["assets"], function (done) {
