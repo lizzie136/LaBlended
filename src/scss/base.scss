@@ -2,21 +2,68 @@
 *{
     font-family: $font-source-code-pro;
     font-size: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
 
 input {
     border-radius: 3px;
 	background-color: #ffffff;
 	border: solid 1px #e5e5e5;
     font-size: 0.8em;
-    height: 2.6em;
+    padding: 15px 10px;
 }
 .btn{
     background: $green-accent;
     border:none;
-    border-radius: 3px; 
+    border-radius: 3px;     
     color:white;
     font-family: $font-opensans;
-    width: 215px;
+    font-size: 11px;
+    height: 40px;
+    padding: 5px 15px;
+}
+
+header{
+    box-shadow: 0 1px 0 0 rgba(229, 229, 229, 0.5);
+    #main-menu{
+        display: flex;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        -webkit-align-items: center;
+        align-items: center;
+        height: 60px;
+        .logo{
+            height: 25px;
+            margin: 30px 20px;
+            margin-right: auto;
+        }
+        .menu-item{
+            font-family: $font-museo; 
+            color: $light-text;
+            font-weight: 500;
+            font-size: 15px;
+            text-decoration: none;
+            padding: 20px 10px;
+            height: 100%;
+            border-left: 1px solid rgba(151, 151, 151, 0.5);
+            &.active{
+                background: $yellow-Lab ;
+            }
+
+            & .user-icon{
+                height: 28px;
+            }
+
+            &.menu-user{
+                width: 15%;
+                display: flex;
+                 -webkit-align-items: center;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+
+    }    
 }

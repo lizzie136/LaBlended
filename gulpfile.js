@@ -42,7 +42,7 @@ gulp.task("sass-watch", ["sass"], function (done) {
 });
 
 gulp.task("js", function() {
-	gulp.src(sources.js)
+	gulp.src(sources.rootJS)
 		.pipe(browserify())
 		.pipe(rename("bundle.js"))
 		.pipe(gulp.dest(config.build + "js"));
@@ -85,4 +85,4 @@ gulp.task("serve", function() {
 	gulp.watch(sources.js, ["js-watch"]);
 });
 
-gulp.task("dev", ["sass-watch", "js-watch", "html-watch", "serve"]);
+gulp.task("dev", ["sass-watch", "js-watch", "html-watch", "assets-watch", "serve"]);
