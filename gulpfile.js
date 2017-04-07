@@ -11,19 +11,25 @@ var config = {
 };
 
 var paths = {
+	assets: "assets/**",
 	html: "**/*.html",
 	sass: "scss/**/*.scss",
-	js: "js/app.js",
+	js: "js/**/*.js",
+	mainSass: "scss/main.scss",
+	mainJS: "js/app.js"
 };
 
 var sources = {
+	assets: config.source + paths.assets,
 	html: config.source + paths.html,
 	sass: config.source + paths.sass,
-	js: config.source + paths.js
+	js: config.source + paths.js,
+	rootSass: config.source + paths.mainSass,
+	rootJS: config.source + paths.mainJS
 };
 
 gulp.task("sass", function() {
-    gulp.src(sources.sass)
+    gulp.src(sources.rootSass)
         .pipe(sass({
         	outputStyle: "compressed"
         }).on("error", sass.logError))
@@ -53,6 +59,16 @@ gulp.task("html", function() {
 });
 
 gulp.task("html-watch", ["html"], function (done) {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("assets", function() {
+	gulp.src(sources.assets)
+		.pipe(gulp.dest(config.build + "assets"));
+});
+
+gulp.task("assets-watch", ["assets"], function (done) {
     browserSync.reload();
     done();
 });
