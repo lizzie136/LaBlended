@@ -3,7 +3,13 @@ var database = config.firebase.database;
 
 function loginInit(){
     var loginForm = document.getElementById("login");
-    if(loginForm) loginForm.addEventListener("submit", validateLogin);
+    if(loginForm) {
+        loginForm.addEventListener("submit", validateLogin);
+    } else {
+        if(!localStorage.getItem("tokenID")){
+            window.location = "login.html";
+        }
+    }
 }
 
 function login(user, password){

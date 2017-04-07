@@ -1,6 +1,6 @@
 #classroom{
-    width:78%;
-    margin-left: 5%;
+    width:65%;
+    margin-left: 7%;
     float: left;
     h1{
         @include museo-h1($light-text);
@@ -43,11 +43,13 @@
     }
     .options{
         display: flex;
-        justify-content: space-between;
-        > div {
+        justify-content: flex-start;
+        > div,
+        > button{
             display: inline-block;
-            padding: 10px;
+            margin-left: 10px;
         }
+
         .velocity{
             input, label{
                 float: left;
