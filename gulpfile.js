@@ -11,18 +11,21 @@ var config = {
 };
 
 var paths = {
-	html: "**/*.html",
-	sass: "scss/**/*.scss",
-	js: "js/**/*.js",
-	mainJS: "js/app.js"
+    assets: "assets/**",
+    html: "**/*.html",
+    sass: "scss/**/*.scss",
+    js: "js/**/*.js",
+    mainJS: "js/app.js"
 };
 
 var sources = {
-	html: config.source + paths.html,
-	sass: config.source + paths.sass,
-	js: config.source + paths.js,
-	rootJS: config.source + paths.mainJS
-};
+    assets: config.source + paths.assets,
+    html: config.source + paths.html,
+    sass: config.source + paths.sass,
+    js: config.source + paths.js,
+    rootJS: config.source + paths.mainJS
+};rootJS: config.source + paths.mainJS
+
 
 gulp.task("sass", function() {
     gulp.src(sources.sass)
@@ -59,6 +62,16 @@ gulp.task("html-watch", ["html"], function (done) {
     done();
 });
 
+gulp.task("assets", function() {
+    gulp.src(sources.assets)
+        .pipe(gulp.dest(config.build + "assets"));
+});
+
+gulp.task("assets-watch", ["assets"], function (done) {
+    browserSync.reload();
+    done();
+});
+
 gulp.task("serve", function() {
 	browserSync.init({
 		server: {
@@ -71,4 +84,4 @@ gulp.task("serve", function() {
 	gulp.watch(sources.js, ["js-watch"]);
 });
 
-gulp.task("dev", ["sass-watch", "js-watch", "html-watch", "serve"]);
+gulp.task("dev", ["sass-watch", "js-watch", "html-watch", "assets-watch", "serve"]);

@@ -1,0 +1,155 @@
+// @import "../variables";
+#course-plan{
+    width:60%;
+    margin-left: 10%;
+    float: left;
+    h1{
+        font-family: $font-museo;
+        font-size: 25px;
+        color:$light-text;
+        padding: 20px 0px;
+    }
+
+    h2{
+        color:$dark-text;
+        font-size: 25px;
+        font-family: $font-museo;
+        font-weight: 500;
+        padding: 15px 0px;
+    }
+
+    h3{
+        color:$grey-Lab;
+        font-size: 20px;
+        font-family: $font-museo;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .unit-plan{
+        padding: 15px;
+        border : 1px solid #979797;
+        & > span, 
+        div > span{
+            display: inline-block;
+            width: 120px;
+        }
+        &.collapsed {
+            h2{
+                color: #202020;
+                opacity:0.5;
+            }
+            border : 1px solid #979797;
+            border-top : none;
+        }
+        .accent-text{
+            color: $yellow-Lab;
+            font-size: 13px;
+            font-family: $font-museo;
+            font-weight: 700;
+        }
+        .lesson{
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
+        .lesson-items{
+            list-style: none;
+            li:hover{
+                background-color: rgba(215, 215, 215, 0.2);
+            }
+            a{
+                color:$light-text;
+                text-decoration: none;
+                margin-left: 120px;
+
+            }
+            .item a{
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-align-items: center;
+                align-items: center;
+                padding: 5px;
+            }
+
+            .item-icon{
+                display: inline-block;
+                width: 20px;
+                height:20px;
+                background-size: 100%;
+                margin-right: 10px;
+            }
+             .video-icon{
+                background-image: url('../assets/images/icon_play.png');
+                background-size: 100% 100%;
+            }
+
+            .quiz-icon{
+                background-image: url('../assets/images/quiz.png');
+                background-size: 100% 100%;
+
+            }
+
+            .challenge-icon{    
+                background-image: url('../assets/images/icon_code.png');
+                background-size: 100% 100%;
+            }
+
+        }
+
+    }
+}
+
+#presenciales{
+    margin-right:5%;
+    width: 25%;
+    float: right;
+    padding: 20px;
+    margin-top:50px;
+    h4{
+        font-family: $font-museo;
+        font-weight: 500;
+        font-size: 20px;
+        color: $grey-Lab;
+    }
+    p{
+        font-family: $font-museo;
+        font-weight: 300;
+        font-size: 13px;
+        color: $light-text; 
+    }
+    .event{
+        width: 100%;
+        border-radius: 3px;
+        background-color: rgba(247, 182, 22, 0.2);
+        border: solid 1px #f7b617;
+        padding:10px;
+
+        img{
+            float:left;
+            width:36px;
+        }
+
+        span{
+            display: inline-flex;
+            margin-left: 10px;
+            font-family: $font-museo;
+            font-weight: 500;
+            font-size: 15px;
+            &.date{
+                color: #4d394b;
+            }
+            &.title{
+                color: $light-text;
+            }
+        }
+    }
+    .btn{
+        width: 100%;
+        font-family: $font-opensans;
+        font-size: 12px;
+        margin-top:15px;
+    }
+    
+}

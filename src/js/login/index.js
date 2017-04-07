@@ -9,11 +9,15 @@ function loginInit(){
 function login(user, password){
     return database.ref('/users/'+user).once('value').then(function(snapshot) {
         if(snapshot.exists() && password == snapshot.val().password){
-            window.location = "index.html";
+            localStorage.setItem("tokenID", "asdfghjkl1234567");
+            if(localStorage.getItem("kickoff") === "done"){
+                 window.location = "index.html";
+            } else{
+                window.location = "kick-off.html";
+            }
         }else{
-            console.log("error en passowrd o algo");
+            console.log("error en password o algo");
         }
-        
     });  
 }
 

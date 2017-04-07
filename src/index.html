@@ -4,32 +4,87 @@
         <title>Laboratoria - Blended Learning</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://use.typekit.net/tsf5qui.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
         <header>
             <nav id="main-menu">
-                <div class="logo"><img src="assets/laboratoria-logo" alt=""></div>
-                <a href="kick-off" class="menu-item">Sprint Kick-off</a>
-                <a href="lesson-plan" class="menu-item">Lesson Plab</a>
-                <a href="mi-squad" class="menu-item">Mi Squad</a>
-            </nav>
+                <div class="logo"><img src="assets/images/logo.png" alt="Laboratoria"></div>
+                <a href="kick-off.html" class="menu-item">Sprint Kick-off</a>
+                <a href="lesson-plan.html" class="menu-item">Lesson RoadMap</a>
+                <a href="mi-squad.html" class="menu-item">My Squad</a>
+                <a href="perfil" class="menu-item menu-user"><span id="coder-name"></span><img src="assets/images/user.png" alt="Usuario" class="user-icon"></a>
+            </nav>  
         </header>
-        <section id="lesson-plan">
-            <div class="lesson">
-                <h3 class="lesson-name">LECCIN</h3>
-                <ul class="lesson-items">
-                    <li class="item"><img src="" alt="" class="item-icon"><span>Video</span></li>
-                    <li class="item"><img src="" alt="" class="item-icon"><span>Quiz</span></li>
-                    <li class="item"><img src="" alt="" class="item-icon"><span>Video</span></li>
-                    <li class="item"><img src="" alt="" class="item-icon"><span>Quiz</span></li>
-                    <li class="item"><img src="" alt="" class="item-icon"><span>Video</span></li>
-                    <li class="item"><img src="" alt="" class="item-icon"><span>Lectura</span></li>
-                    <li class="item"><img src="" alt="" class="item-icon"><span>Video</span></li>
-                    <li class="item"><img src="" alt="" class="item-icon"><span>Challenge</span></li>
-                </ul>
+        
+        <section id="course-plan">
+            <h1>Course:  Data Structures</h1>
+            <div class="unit-plan">
+                <h2>Unit 1:Sets</h2>
+                <div class="lesson">
+                    <span>ONLINE</span><h3>Lesson 1: Introduction to Sets</h3>
+                    <ul class="lesson-items">
+                        <li class="item"><a href="#"><span class="item-icon video-icon"></span><span>Video - What are sets?</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon quiz-icon"></span><span>Quiz</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon video-icon"></span><span>Video - Implementing Sets: Naive y Native</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon challenge-icon"></span><span>Code Challenge</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon video-icon"></span><span>Video - Implementing Sets: Practice</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon challenge-icon"></span><span>Code Challenge</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon challenge-icon"></span><span>Code Challenge</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon video-icon"></span><span>Video - Implementing Sets: Practice</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon video-icon"></span><span>Video - Operations: IntersectionVideo</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon quiz-icon"></span><span>Quiz</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon video-icon"></span><span>Video - Using Sets for visualization</span></a></li>
+                    </ul>
+                </div>
+                <div class="lesson">
+                    <span>ONLINE</span><h3>Lesson 2: Practicing Sets</h3>
+                    <ul class="lesson-items">
+                        <li class="item"><a href="#"><span class="item-icon challenge-icon"></span><span>`union()`</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon challenge-icon"></span><span>`intersect()`</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon challenge-icon"></span><span>`difference()`</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon challenge-icon"></span><span>`subset()`</span></a></li>
+                        <li class="item"><a href="#"><span class="item-icon challenge-icon"></span><span>`superset()`</span></a></li>
+                    </ul>
+                </div>
+                <div class="lesson">
+                    <span class="accent-text">PRESENCIAL:20 ABRIL 6:00 PM</span><h3>Lesson 3: Testing your Knowledge</h3>
+                </div>
+                <div class="lesson">
+                    <span class="accent-text">WEBINAR: 24 ABRIL6:00 PM</span><h3>Lesson 4: Enunciado</h3>
+                </div>
+                <div class="lesson">
+                    <span class="accent-text">WEBINAR: 24 ABRIL6:00 PM</span><h3>Lesson 5: Enunciado</h3>
+                </div>
+            </div>
+            <div class="unit-plan collapsed">
+                <h2>Unit 2: Queues</h2>
+            </div>
+            <div class="unit-plan  collapsed">
+                <h2>Unit 3: Hashes</h2>
+            </div>
+            <div class="unit-plan  collapsed">
+                <h2>Unit 4: Stacks</h2>
+            </div>
+            <div class="unit-plan  collapsed">
+                <h2>Unit 5: Trees</h2>
+            </div>
+            <div class="unit-plan  collapsed">
+                <h2>Unit 4: Graphs</h2>
             </div>
         </section>
+        <aside id="presenciales">
+            <h4>Tu próxima clase en Lab</h4>
+            <p>Aquí aparecen solo los eventos presenciales</p>
+            <div class="event">
+                <img src="assets/images/calendar.png" alt="" class="event-icon">
+                <span class="date">20 Abril 6:00 PM</span>
+                <span class="title">Lección 2: Practicing Sets</span>
+            </div>
+            <button type="button" class="btn">AGREGAR FECHAS AL CALENDARIO</button>
+        </aside>
         <script src="./js/bundle.js"></script>
     </body>
 </html>

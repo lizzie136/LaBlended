@@ -1,8 +1,14 @@
-@import "../variables";
+// @import "../variables";
+
+$login-width : 250px;
 .login-header{
     text-align: center;
     margin-top: 50px;
+    .logo{
+        width: $login-width*0.8;
+    }
     h3{
+        color: $light-text;
         font-family: $font-museo;
         font-weight: 300;
         font-size: 1em;
@@ -13,7 +19,7 @@
 }
 
 #login{
-    width:250px;
+    width:$login-width;
     margin:auto;
     padding: 10px;
 
