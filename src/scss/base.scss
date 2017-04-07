@@ -25,6 +25,13 @@ input {
     padding: 5px 15px;
 }
 
+.museo-h1{
+    @include museo-h1($light-text);
+}
+
+.opensans-mini{
+     @include opensans($light-text, "12px");
+}
 header{
     box-shadow: 0 1px 0 0 rgba(229, 229, 229, 0.5);
     #main-menu{
@@ -33,7 +40,7 @@ header{
         justify-content: flex-end;
         -webkit-align-items: center;
         align-items: center;
-        height: 60px;
+        height: 40px;
         .logo{
             height: 25px;
             margin: 30px 20px;
@@ -45,7 +52,7 @@ header{
             font-weight: 500;
             font-size: 15px;
             text-decoration: none;
-            padding: 20px 10px;
+            padding: 10px 10px;
             height: 100%;
             border-left: 1px solid rgba(151, 151, 151, 0.5);
             &.active{

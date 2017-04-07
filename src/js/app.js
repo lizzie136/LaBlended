@@ -29,3 +29,7 @@ page.get("/lesson", function() {
 page.get("/editor", function() {
 	var editor = require("./editor");
 });
+
+page.get("/classroom", function() {
+	var lesson = require("./lesson");
+});

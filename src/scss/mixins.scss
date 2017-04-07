@@ -5,3 +5,10 @@
         color:$color;
         padding: 20px 0px
 }   
+
+@mixin opensans($color, $size){
+        font-family: $font-opensans;
+        font-size: $size;
+        color:$color;
+        padding: 20px 0px;
+}   

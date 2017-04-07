@@ -1,0 +1,24 @@
+@import "quizlib";
+
+#quiz-div {
+  background-color: white;
+  font-family: $font-museo;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+.quizlib-question-title {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+button {
+    background: $green-accent;
+    border:none;
+    border-radius: 3px;     
+    color:white;
+    font-family: $font-opensans;
+    font-size: 11px;
+    height: 40px;
+    padding: 5px 15px;
+    margin: 10px 0px;
+}

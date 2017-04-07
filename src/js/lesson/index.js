@@ -1,6 +1,10 @@
-var materials = document.getElementsByClassName("material");
+var quiz = require("../quiz").quiz
+var questions = require("../quiz/questions").questions;
 
+var materials = document.getElementsByClassName("material");
+console.log(materials);
 var showMaterial = function (e) {
+	e.preventDefault();
 	var materialType = this.getAttribute("data-material-type");
 	switch(materialType) {
 		case "video": 
@@ -8,6 +12,9 @@ var showMaterial = function (e) {
 			break;
 		case "challenge":
 			showChallenge(this);
+			break;
+		case "quiz":
+			showQuiz(this);
 			break;
 		default: 
 			console.log("implementig...");
@@ -24,8 +31,10 @@ var showVideo = function (element) {
 	var wistiaToken = element.getAttribute("data-token");
 	var videoContainer = document.createElement("div");
 	videoContainer.className = "wistia_embed wistia_async_" + wistiaToken  +" videoFoam=true";
-	videoContainer.style.height = "100%";
-	videoContainer.style.width = "100%";
+
+	videoContainer.style.height = "700px";
+	videoContainer.style.width = "400px";
+	console.log;
 	addContent(videoContainer);
 };
 
@@ -42,6 +51,16 @@ var showChallenge = function (element) {
 	iFrame.onloadeddata = addListenerToSubmitReplIt;
 };
 
+var showQuiz = function (element){
+	console.log("quiz");
+	var id = parseInt(element.getAttribute("data-id"));
+	if(id == 0){
+		quiz('quiz-1', questions.slice(0, 4));
+	}else if(id==1){
+		quiz('quiz-2', questions.slice(4));
+	}
+}
+
 var addListenerToSubmitReplIt = function () {
 	var root = document.getElementById("root");
 	console.log(root);
@@ -51,3 +70,14 @@ var addListenerToSubmitReplIt = function () {
 	material.addEventListener("click", showMaterial);
 });
 
+
+var btnSlack = document.getElementById("slack-btn");
+if(btnSlack) btnSlack.addEventListener("click", function(e){
+	window.open(e.target.getAttribute("data-url"), "_blank");
+})
+
+
+var quizBtn = document.getElementById("quiz-btn");
+if(quizBtn) quizBtn.addEventListener("click", function(e){
+	window.open(e.target.getAttribute("data-url"), "_blank");
+})
