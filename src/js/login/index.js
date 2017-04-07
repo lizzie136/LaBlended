@@ -10,6 +10,7 @@ function login(user, password){
     return database.ref('/users/'+user).once('value').then(function(snapshot) {
         if(snapshot.exists() && password == snapshot.val().password){
             localStorage.setItem("tokenID", "asdfghjkl1234567");
+            localStorage.setItem("name", snapshot.val().name);
             if(localStorage.getItem("kickoff") === "done"){
                  window.location = "index.html";
             } else{

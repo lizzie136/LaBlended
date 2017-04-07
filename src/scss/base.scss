@@ -20,7 +20,9 @@ input {
     border-radius: 3px;     
     color:white;
     font-family: $font-opensans;
+    font-size: 11px;
     height: 40px;
+    padding: 5px 15px;
 }
 
 header{
@@ -46,8 +48,7 @@ header{
             padding: 20px 10px;
             height: 100%;
             border-left: 1px solid rgba(151, 151, 151, 0.5);
-            flex-direction: right;
-            & .active{
+            &.active{
                 background: $yellow-Lab ;
             }
 
@@ -56,7 +57,11 @@ header{
             }
 
             &.menu-user{
-                width: 100px;
+                width: 15%;
+                display: flex;
+                 -webkit-align-items: center;
+                align-items: center;
+                justify-content: flex-end;
             }
         }
 

@@ -5,3 +5,4 @@ var kickoff = require("./kickoff");
 login.init();
 
 console.log(config);
+config.menu();

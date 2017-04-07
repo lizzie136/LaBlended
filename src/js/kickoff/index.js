@@ -7,6 +7,7 @@ var continueElement = document.getElementById("kick-off-done");
 continueElement && continueElement.addEventListener("click", goHome);
 
 function goHome(){
+	localStorage.setItem("kickoff", "done");
 	window.location = "index.html";
 }
 

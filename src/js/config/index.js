@@ -12,9 +12,14 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
+var menuInit = function(){
+    var coderName = document.getElementById("coder-name");
+    if(coderName) coderName.appendChild(document.createTextNode(localStorage.getItem("name")));
+}
 
 module.exports = {
 	firebase: {
 		database: database
-	}
+	}, 
+    menu : menuInit,
 };

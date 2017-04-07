@@ -4,10 +4,7 @@
     margin-left: 10%;
     float: left;
     h1{
-        font-family: $font-museo;
-        font-size: 25px;
-        color:$light-text;
-        padding: 20px 0px;
+        @include museo-h1($light-text);
     }
 
     h2{

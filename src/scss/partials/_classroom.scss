@@ -1,0 +1,55 @@
+#classroom{
+    width:78%;
+    margin-left: 5%;
+    float: left;
+    h1{
+        @include museo-h1($light-text);
+
+    }
+    .video{
+        margin-bottom: 10px;
+    }
+    .options{
+        display: flex;
+        justify-content: space-between;
+        > div {
+            display: inline-block;
+            padding: 10px;
+        }
+        .velocity{
+            input, label{
+                float: left;
+            }
+            input{
+                clear: left;
+            }
+        }
+        .love-btn{
+            width:40px;
+            height: 40px;
+            text-align: center;
+            padding: 0;
+            background-color:white; 
+	        border: solid 1px #e5e5e5;
+        }
+        .slack-btn{
+	        border: solid 1px #e5e5e5;
+            background: url('../assets/images/iconoslack.png') no-repeat;
+            background-position: 5px center;
+            background-size: 17px 17px;
+            background-color: $morado-slack;
+            padding-left:30px;
+        }
+
+        .grey-btn{
+            background-color: $grey-btn;
+        }
+    }
+}
+
+#widgets{
+    width: 15%;
+    float: right;
+    background-color: #d8d8d8;
+	border: solid 1px #979797;
+}
